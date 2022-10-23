@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 10vh 60vh 30vh ;
+        height: 70vh;
+        grid-template-areas: 
+        "header header"
+        "main main "
+        "footer footer"     
+        }
+        .header{
+            grid-area: header;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(162, 160, 160);
+        }
+        .main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns:70% 30% ;
+            grid-template-areas:
+            "section aside";
+        }
+        .section{
+            grid-area: section;
+            display: grid;
+            background-color: bisque;
+            grid-template-rows: 60% 20% 20%;
+            grid-template-areas: 
+                "row1"
+                "row2"
+                "row3"
+        }
+        .row1{
+            grid-area: row1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .row2{
+            grid-area: row2;
+            display: flex;
+            background-color: rgb(243, 196, 110);
+            margin-bottom: 15px;
+            gap: 20px;
+        }
+        .up_box{
+            flex-grow: 1;
+            background-color:  rgb(243, 196, 110);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box_right{
+            flex-grow: 1;
+            background-color:  rgb(243, 196, 110);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .row3{
+            grid-area: row3;
+            display: flex;
+            background-color: rgb(243, 196, 110);
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: aquamarine;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .footer{
+            background-color: rgb(162, 160, 160);
+            grid-area: footer;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .secfoot1{
+        width: 150px;
+        height: 40px;
+        background-color: white;
+        padding: 25px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">[Шапка страницы]</header>
+        <main class="main">
+            <div class="section" >
+                <div class="row1">[Основная часть]</div>
+                <div class="row2">
+                <div class="up_box_right">[Ещё 1]</div>
+                <div class="up_box">[Ещё 2]</div>
+                </div>
+            <div class="row3">[Ещё 3]</div>
+            </div>
+            <div class="aside">[Боковая область]</div>
+        </main>
+        
+        <footer class="footer">
+            <div class="cell secfoot1">[Секция футера1]</div>
+            <div class="cell secfoot1">[Секция футера2]</div>
+            <div class="cell secfoot1">[Секция футера3]</div>
+            <div class="cell secfoot1">[Секция футера4]</div>
+        </footer>
+    </div>
+</body>
+</html>

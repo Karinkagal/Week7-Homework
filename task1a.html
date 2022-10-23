@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        
+        display: grid;
+        grid-template-columns: 70% 30%;
+        grid-template-rows: 9vh 59h 29vh ;
+        height: 70vh;
+        grid-template-areas:
+        "header header "
+        "main main"
+        "footer footer "
+        }
+        .header{
+            grid-area: header;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center ;
+            height: 120px;
+            background-color: grey;
+        }
+        main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 69% 30%;
+            grid-template-areas:
+            "section aside";
+            background-color: blanchedalmond;
+            width: 100%;
+        }
+        .section{
+            padding: 0 25px;
+            grid-area: section;
+            display: grid;
+            grid-template-rows: 59% 20% 20%;
+            grid-template-areas:
+            "row1"
+            "row2"
+            "row3";
+            gap: 1rem;
+        }
+        .row1{
+            grid-area: row1 ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 2%;
+            background-color: blanchedalmond;
+            padding-top: 20px;
+            
+        }
+        .row2{
+            grid-area: row2 ;
+            display: flex;
+            margin-bottom: 1.5%;
+            width: 99%;
+            padding-top: 30%;
+            height: 30px;
+            background-color: blanchedalmond;
+            margin-left: 5px;
+        }
+        .up_box{
+            flex-grow: 1;
+            background-color:gold;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 50%;
+        }
+        .box_right{
+            margin-right: 25px;
+            padding-right: 10px;
+        }
+        .row3{
+            grid-area: row3 ;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content:center ;
+            height: 30px;
+            width: 98.9%;
+            background-color: gold;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+        .downbox{
+            background-color: gold;
+        }
+        aside{
+            grid-area: aside;
+            background-color: aquamarine;
+            width: 103%;
+            text-align: center;
+            padding-top: 25px;
+        }
+        footer{
+            background-color: grey;
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100px;
+        }
+        .box{
+            width: 150px;
+            height: 10px;
+            background-color: white;
+            padding: 23px;
+        }
+
+        @media screen and (max-width:767px) {
+            footer{
+            background-color: grey;
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 100px;
+            }
+            .box{
+            width: 150px;
+            height: 30px;
+            background-color: white;
+            padding: 5px;
+            margin-right: 5px;
+            padding-right: 5px;
+            font-size: 15px;
+            margin-left: 10px;
+            }
+            aside{
+            grid-area: aside;
+            background-color: aquamarine;
+            width: 104%;
+            text-align: center;
+            height: 100%;
+            } 
+            main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 69% 30%;
+            grid-template-areas:
+            "section aside";
+            background-color: blanchedalmond;
+            width: 100%;
+            height: 10%;
+            }
+            .row1{
+            grid-area: row1 ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 2%;
+            background-color: blanchedalmond;
+            padding-top: 20px;
+            width: 100%;
+            }
+            .row2{
+            grid-area: row2 ;
+            display: flex;
+            margin-bottom: 1.5%;
+            width: 100%;
+            padding-top: 35%;
+            height: 30px;
+            background-color: blanchedalmond;
+            margin-left: 2%;
+            }
+            .row3{
+            grid-area: row3 ;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content:center ;
+            height: 30px;
+            width: 100%;
+            background-color:gold;
+            margin-bottom: 5px;
+            margin-left: 2%;
+            }
+            .downbox{
+            background-color: gold;
+            }
+        }
+        @media screen and (min-width: 768px)and (max-width:1024px){
+            .header{
+            grid-area: header;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-align: center ;
+            height: 95px;
+            background-color: grey;
+            }
+            aside{
+            grid-area: aside;
+            background-color:aquamarine ;
+            width: 110%;
+            text-align:center;
+            height:100%;
+            }
+            footer{
+            background-color: grey;
+            grid-area: footer;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90px;
+            }
+            .box{
+            width: 130px;
+            height: 5px;
+            background-color: white;
+            padding: 20px;
+            }
+            main{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 69% 30%;
+            grid-template-areas:
+            "section aside";
+            background-color: blanchedalmond;
+            width: 98%;
+            }
+            .row2{
+            grid-area: row2 ;
+            display: flex;
+            margin-bottom: 1.5%;
+            width: 99.5%;
+            padding-top: 30%;
+            height: 30px;
+            background-color: blanchedalmond;
+            }
+            .up_box{
+            flex-grow: 1;
+            background-color:gold;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 150px;
+            margin-right: 5px;
+            margin-left: 5px;
+            }
+            .row3{
+            grid-area: row3 ;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content:center ;
+            height: 30px;
+            width: 97.5%;
+            background-color: gold;
+            margin-bottom: 10px;
+            margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">[Шапка страницы]</header>
+        <main>
+            <section>
+                <div class="row1">[Основная часть]</div>
+                <div class="row2">
+                <div class="up_box box_right"> [Ещё 1] </div>
+                <div class="up_box"> [Ещё 2] </div>
+                </div>
+                <div class="row3">
+                    <div class="downbox">[Ещё 3]</div> 
+                </div>
+            </section>
+        <aside class="aside">[Боковая область]</aside>    
+        </main> 
+        <footer>
+            <div class="box">[Секция футера1]</div>
+            <div class="box">[Секция футера2]</div>
+            <div class="box">[Секция футера3]</div>
+            <div class="box">[Секция футера4]</div>
+        </footer>
+    </div> 
+</body>
+</html>

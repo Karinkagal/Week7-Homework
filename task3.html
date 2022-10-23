@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 2%;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: repeat(2, 30%);
+        }
+        .container > div > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div><img src="./assets/images/cat.jpg"></div>
+        <div><img src="./assets/images/cat1.jpg"></div>
+        <div><img src="./assets/images/cat2.jpg"></div>
+        <div><img src="./assets/images/cat3.jpg"></div>
+        <div><img src="./assets/images/mause1.jpg"></div>
+        <div><img src="./assets/images/cat4.jpg"></div>
+        <div><img src="./assets/images/cat5.jpg"></div>
+        <div><img src="./assets/images/cat6.jpg"></div>
+        <div><img src="./assets/images/cat7.jpg"></div>
+        <div><img src="./assets/images/cat8.jpg"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+        background-color: #162d46;
+        color: #FFFFFF;
+        height: 590vh; 
+        background-repeat: no-repeat;  
+        }
+        a {
+            text-decoration: none;}
+        a:hover {
+            text-decoration: underline;}
+        .header{
+            width: 80%;
+            height:100vh ;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            
+        }
+        .navigation{
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            gap: 2%;
+            text-decoration: none;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 0,875em;
+            padding: 0.5% 1.5%;
+            height: 1vh;
+            color: #FFFFFF;;
+        }
+        #fillinform{
+            font-weight: 600;
+            font-size: 0,8125em;
+            padding: 1% 1% 2% 1% ;
+            width: 14%;
+            right: 15%;
+            background: #018ABE;
+            border-radius: 3px;
+            gap: 1%;
+        }
+        .wrapper{
+            width: 100%;
+        }
+        .background-image {width: 100%; max-width: 100%;}
+        #fpicture1{
+            display: block;
+            border-radius: 1%;
+            margin-left: 13%;
+            margin-right: 11%;
+            height: 70vh;
+            background-repeat: no-repeat;
+            max-width: 100%;
+            
+        }
+        #strhealth{
+            text-align: center;
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5em;
+            line-height: 140%;
+            padding-top: 13%;
+        }
+        #aquatherapy{
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 4em;
+            line-height: 140%;
+            text-align: center;
+            width: 100%;
+        }
+        .secphead{
+            text-align: center;
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3em;
+            line-height: 140%;
+        }
+        .container1{
+            display: grid;
+            width: 76%;
+            height: 75vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 3% 2%;
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.4em;
+            line-height: 140%;
+            margin-left: 13%;
+        }
+        .cell{
+            display: inline-block;
+            padding-top: 50%;
+            text-align: center;
+            border-radius: 5%;
+        }
+        #standstyle{
+            display: inline-block;
+            padding-top: 130%;
+            padding-right:10%;
+            grid-row: 1/4;
+            grid-column: 1 / 2;
+            width: 100%;
+            background-repeat: no-repeat;
+            border-radius: 5%;
+            font-size: 1.2em;
+        }  
+        #couplestyle{
+            display: inline-block;
+            text-align: center;
+            height: 35vh;
+        }
+        #tcnt2{
+            font-size: 1.2em;
+            padding-left: 10%;
+            text-align: left;
+            border-radius: 10%;
+        }
+        #feedcli{
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3em;
+            line-height: 140%;
+            text-align: center;
+        }
+        #container2{
+            display: flex;
+            width: 99%;
+            height: 75vh;
+            justify-content: space-around;
+            border-radius: 10px;
+            gap: 2%;
+        }
+        .box1{
+            display: block;
+            width: 40%;
+            height: 33.5vh;
+            background: #075e81;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: left;
+            margin-top: 5.3%;
+        }
+        #alex{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 140%;
+        }
+        #alexlor{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 0.62em;
+            line-height: 140%;
+        }
+        .box2{
+            display: block;
+            width: 636px;
+            height: 350px;
+            background: #018ABE;
+            margin-top: 50px;
+            padding: 20px;
+            text-align: left;
+            border-radius: 10px;
+        }
+        #kira{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.25em;
+            line-height: 140%;
+            margin-top: 2%;
+        }
+        #kiralor{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 0.875em;
+            line-height: 140%;
+        }
+        .box3{
+            display: block;
+            width: 40%;
+            height: 33.5vh;
+            background: #075e81;
+            border-radius: 10px;
+            padding: 2%;
+            text-align: left;
+            margin-top: 5.3%;
+        }
+        #jana{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1em;
+            line-height: 140%;
+        }
+        #janalor{
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 0.62em;
+            line-height: 140%;
+        }
+        #aboutritm{
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.625em;
+            line-height: 140%;
+            text-align: center;
+        }
+        #container3{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1%;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1em;
+            line-height: 140%;
+            text-align: left;
+            row-gap: 9%;
+        }
+        .field{
+            display: inline-block;
+            border-radius: 10px;
+            width: 70%;
+            height: 45%;
+        }
+        #ritmmassage{
+            font-weight: 700;
+            font-size: 1.5em;
+        }
+        #feld1{
+            display: block;
+            width: 60%;
+            height: 30%;
+            margin-top: 2.5%;
+            margin-left: 27%;
+        }
+        #feld4{
+            display: block;
+            width: 73%;
+            height: 41vh;
+            margin-top: 1%;
+        }
+        #feld2{
+            width: 70%;
+            height: 115%;
+        }
+        #feld3{
+            width: 70%;
+            height: 115%;
+            margin-left: 27%;
+        }
+        #price{
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 2.625em;
+            line-height: 140%;
+            text-align: center;
+        }
+        #container4{
+            display: grid;
+            grid-template-columns: 1fr 0.2fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+        .ciel{
+            display: inline-block;
+            height: 5vh;
+        }
+        #imgciel{
+            display: inline-block;
+            background-repeat: no-repeat;
+            grid-row: 2/8;
+            grid-column: 3 / 4;
+            height: 100%;
+            width: 80%;
+        }
+        #certif{
+            text-align: center;
+            margin-right: 23%;
+            margin-top: 3%;
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.3125em;
+            line-height: 140%;
+        }
+        .ciel-4, .ciel-7, .ciel-10, .ciel-12, .ciel-14 {
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.125em;
+            line-height: 140%;
+        }
+        #down{
+            margin-top: 1%;
+            text-align: center;
+        }
+        .container5{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            height: 81vh;
+            width: 90%;
+            margin-left: 8%;
+            border-radius: 10px;
+            row-gap: 3.5%;
+        }
+        .nummer{
+            display: inline-block;
+            text-align: left;
+        }
+        #imgmap{
+            display: inline-block;
+            background-repeat: no-repeat;
+            grid-row: 1/3;
+            grid-column: 1 / 3;
+            height: 81vh;
+            width:110%;
+        }
+        #finalcall{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 1% 1%;
+            gap: 1%;
+            background: white;
+            border-radius: 3px;
+            width: 45%;
+            height: 19%;
+            left: 120%;
+            top: 49%;
+            font-family: 'Proxima Nova';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 0.8125em;
+            line-height: 140%;
+            color: #018ABE;
+        }
+        #swim{
+            font-family: 'El Messiri';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.5em;
+            line-height: 140%;
+        }
+        .workersbass{
+            display: block;
+            background: #018ABE;
+            border-radius: 10px;
+            justify-content: center;
+            text-align: left;
+            width: 86%;
+            height: 99%;
+            padding: 10%;
+        }
+        .beansbass{
+            display: block;
+            background: #018ABE;
+            border-radius: 10px;
+            justify-content: center;
+            text-align: left;
+            width: 86%;
+            height: 99%;
+            padding: 10%;
+        }
+    </style>
+</head>
+
+<body>
+        <header><br>
+            <div class="navigation">
+            <a class="navigation" href="mainpage.html" id="mainpage">Главная</a>
+            <a class="navigation" href="seances.html">Сеансы</a>
+            <a class="navigation" href="feedbackclients.html">Отзывы</a>
+            <a class="navigation" href="menucontact.html" >Контакты</a>
+            <a class="navigation" href="menunews.html" >Новости</a>
+            <a class="navigation" href="menuaboutne.html" >Обо мне</a>
+            <a class="navigation" href="menublog.html">Блог</a>
+            <a class="navigation" href="fromfor.html" id="fillinform">Записаться на сеанс</a>
+            </div>
+            <br><br><br><br>
+            <div clas="wrapper">
+            <div style="background-image: url('./assets/images/splash.png');" id="fpicture1">
+            <p id="strhealth">Укрепление здоровья</p>
+            <p id="aquatherapy">Акватерапия</p><br><p id="aquatherapy">RitmStyle</p>
+            </div>
+            </div>
+        </header>
+    <main>
+        <br><br><br><br><br><div class="secphead">Сеансы RitmStyle</div> <br><br><br><br>
+        <div class="container1">
+            <div class="cell cell-1" style="background-image: url('./assets/images/gridsplash.png');" id="standstyle"><span id="tstandstyle">Стандартный RitmStyle</span> 
+            </div>
+            <div class="cell cell-2" style="background-image: url('./assets/images/gridsplash.png');" id="couplestyle"><p id="tcnt2">RitmStyle для пар</p></div>
+            <div class="cell cell-3" style="background-image: url('./assets/images/gridsplash.png');" id="couplestyle"><p id="tcnt2">RitmStyle с полным погружением под воду</p></div>
+            <div class="cell cell-5" style="background-image: url('./assets/images/gridsplash.png');" id="couplestyle"><p id="tcnt2">RitmStyle для беременных</p></div>
+            <div class="cell cell-6" style="background-image: url('./assets/images/gridsplash.png');" id="couplestyle"><p id="tcnt2">RitmStyle + красочная подводная фотосессия</p></div>
+        </div><br><br><br><br><br>
+        <br><p id="feedcli">Отзывы</p>
+        <div class="container2" id="container2">
+            <div class="box1"><p id="alex">Александра Дмитриева</p><br><p id="alexlor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur 
+                nulla viverra egestas tellus. Cursus scelerisque phasellus netus proin. Etiam mauris maecenas facilisis faucibus mauris 
+                eleifend purus. Purus dictum vulputate elementum mauris amet.</p><br><p id="alexlor">Hendrerit sit cras ullamcorper morbi quam vitae ante 
+                nibh. Ornare ipsum mi nisl augue placerat lacus. Dolor ipsum fermentum viverra bibendum faucibus urna. Arcu, ut sed tellus lacus quisque diam. Semper sed aenean in etiam mus praesent diam semper 
+                in. Pretium id a amet, massa ligula nibh faucibus ornare. Ut aenean rhoncus sed nam ut diam dapibus. Risus nibh faucibus eu 
+                vestibulum tempor, quis ultrices mauris. Porta enim, donec odio sagittis, eget velit at. </p></div>
+            <div class="box2"><p id="kira">Кира Иванова</p> <br><p id="kiralor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Netus diam risus morbi nulla dictum.
+                Urna mi orci gravida placerat amet, eu, aliquet facilisis aliquet. Dolor praesent nam ornare fringilla enim nibh donec sit imperdiet. Amet, diam duis eu 
+                sit et. Volutpat vestibulum a lectus sed blandit.</p> <br><p id="kiralor"> Venenatis urna mattis eu enim molestie iaculis et aliquet. Velit in pellentesque vestibulum phasellus orci. Fermentum sed phasellus aliquam nulla non aenean. Quisque id nunc, mauris potenti a massa. Fermentum at 
+                elit, convallis leo dolor aliquet id elementum. Ullamcorper sociis et cum bibendum in egestas. Diam, urna, sed tempus mollis aliquam
+                elit. Facilisi nam nulla pulvinar mauris vel lacinia venenatis</p></div>
+            <div class="box3"><p id="jana">Яна Жернова</p><br><p id="janalor">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacinia eget mattis orci aliquam enim tincidunt gravida aliquet ut. Ipsum vulputate morbi
+                felis, lobortis tincidunt. Pretium dictum odio feugiat auctor diam sit viverra gravida. Lobortis arcu rhoncus, mi mi vitae feugiat 
+                amet, vitae ac. Cursus diam turpis iaculis nisi sit. Vel blandit et sit elit vestibulum feugiat proin tempor, justo. Diam commodo, 
+                pellentesque at porttitor tristique faucibus faucibus morbi. Bibendum pretium lacus, tempus viverra vitae odio nunc eget. 
+                </p><br><p id="janalor">Tortor fermentum orci neque sed. Mauris faucibus diam lorem erat ullamcorper donec egestas neque.
+                    Maecenas malesuada mauris magnis sed id. Luctus vitae justo, in consectetur arcu. Nulla feugiat at eu in aliquet.
+                    Diam nunc, libero mauris tellus suspendisse morbi sagittis semper.</p></div>
+        </div>
+        <p id="aboutritm">Об RitmStyle</p><br><br><br><br>
+        <div class="container3" id="container3">
+        <div class="field field-1" id="feld1"><p id="ritmmassage">RitmStyle массаж</p><br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in purus,
+            sed tellus eget mattis nibh quam. Eu ornare nunc, id est. Erat consectetur etiam a sit diam in imperdiet amet. Diam nisl, 
+            ipsum suscipit amet. Eleifend amet habitasse proin quis adipiscing.</p><br><p>Nisl convallis mauris in consequat. Sit ac vitae 
+            posuere maecenas dictumst quam. Felis amet diam, non augue massa. Egestas molestie lobortis rhoncus, elit nulla nisl. Habitant 
+            tortor at tempor.</p></div>
+        <div class="field field-2" style="background-image: url('./assets/images/rectangle.png');" id="feld2"></div>
+        <div class="field field-3" style="background-image: url('./assets/images/rectangle.png');" id="feld3"></div>
+        <div class="field field-4" id="feld4"><br><p id="ritmmassage">RitmStyle гидротерапия</p><br><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu 
+            cras quis ac a non ut viverra turpis eget. Hendrerit quis pulvinar massa ipsum sem. Donec posuere nulla enim non neque etiam. Eros 
+            arcu, pulvinar penatibus luctus ridiculus sagittis vel nunc hac. Nisi, diam tincidunt dui viverra. Eget quis ultricies sem nunc risus
+            senectus luctus ultricies. Enim feugiat pharetra pharetra et.</p><br><p>Pulvinar arcu at morbi posuere cursus. Fermentum est
+            sit enim velit ornare molestie. Ipsum nisi id sed tempor elementum. Mi nunc eget pellentesque ipsum. Suspendisse risus a id 
+            vel massa tincidunt. Hendrerit blandit in augue vel mi quam magna egestas. Fringilla ac lacus viverra ullamcorper leo, enim 
+            vitae id aliquam. Magna sed tristique tellus enim, netus tempor at elit dui. Ullamcorper hendrerit feugiat libero tellus diam
+            egestas dui tellus odio.</p></div>
+        </div>
+        <br><br><br><br><br><br><br><br><p id="price">Стоимость сеансов</p>
+        <div class="container4" id="container4">
+            <div class="ciel ciel-0"></div> 
+            <div class="ciel ciel-1"></div> 
+            <div class="ciel ciel-2"></div> 
+            <div class="ciel ciel-3"><p id="down">RitmStyle с погружением</p></div> 
+            <div class="ciel ciel-4"><p id="down">1000р.</p></div> 
+            <div class="ciel ciel-2" style="background-image: url('./assets/images/merci.png');" id="imgciel"></div>
+            <div class="ciel ciel-6"><p id="down">Абонемент на RitmStyle</p> </div> 
+            <div class="ciel ciel-7"><p id="down">5500р.</p></div> 
+            <div class="ciel ciel-9"><p id="down">RitmStyle для пар</p> </div>
+            <div class="ciel ciel-10"><p id="down">6000р.</p></div>
+            <div class="ciel ciel-11"><p id="down">RitmStyle для беременных</p> </div>
+            <div class="ciel ciel-12"><p id="down">13500р.</p></div>
+            <div class="ciel ciel-13"><p id="down">RitmStyle + фотосессия</p></div>
+            <div class="ciel ciel-14"><p id="down">11500р.</p></div>
+            <div class="ciel ciel-15"></div>
+            <div class="ciel ciel-16"></div>
+            <div class="ciel ciel-17"></div>
+            <div class="ciel ciel-18"></div>
+            <div class="ciel ciel-19" id="certif">Подарочный сертификат</div>
+
+        </div><br><br><br><br><br><br>
+    </main>
+    <footer>
+        <div class="container5">
+            <div class="nummer nummer-1"  style="background-image: url('./assets/images/map.png');"  id="imgmap"></div>
+            <div class="nummer nummer-2" id="bad1">
+                <div class="workersbass"><p id="swim">Бассейн WorkClass</p><br>
+                <p>Невский 140</p><br>
+                <p>м. Спасская</p><br>
+                <p>Запись по договоренности</p><br>
+                <a class="footer" href="fromfor.html" id="finalcall">Записаться на сеанс</a></div>
+            </div>
+            <div class="nummer nummer-3" id="bad2"> 
+                <div class="beansbass">
+                <p id="swim">Бассейн "На Гороховой"</p><br>
+                <p>3-й проезд Иванова</p><br>
+                <p>м. Крестовский остров</p><br>
+                <p>Запись по договоренности</p><br>
+                <a class="footer" href="fromfor.html" id="finalcall">Записаться на сеанс</a><br>
+            </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
